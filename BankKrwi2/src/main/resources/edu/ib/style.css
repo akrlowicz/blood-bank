@@ -1,0 +1,266 @@
+.root {
+    -fx-text-base-color: rgba(0, 0, 0, 0.75);
+    -fx-text-fill: -fx-text-base-color;
+
+
+    -fx-background-color: rgb(239,239,239);
+
+    /*default font */
+    -fx-font-family: 'Helvetica';
+    -fx-font-size: 12.0px;
+    -fx-font-weight: 700;
+
+
+    -my-grey: rgba(0, 0, 0, 0.75);
+    -color-neutral: rgb(239,239,239);
+    -accent-color: rgba(144, 13, 14, 0.85);
+}
+
+
+.button{
+    -fx-background-color: -color-neutral;
+    /*radial-gradient(center 50% 0%, radius 100%, rgba(243, 243, 243, 0.9), rgba(144, 13, 14, 0));;*/
+    -fx-background-radius: 25px;
+    -fx-text-fill: -accent-color;
+    -fx-border-color: -accent-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: 25px;
+}
+
+
+
+.button:selected {
+    -fx-text-fill: -my-grey;
+}
+
+.button:hover {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: -color-neutral;
+}
+
+.text-field {
+    -fx-font-size: 12px;
+    -fx-border-color: -accent-color;
+    -fx-background-color: -accent-color;
+    -fx-border-radius: 25px;
+    -fx-border-width: 2px;
+    -fx-text-fill: -color-neutral;
+    -fx-background-radius: 25px;
+}
+
+.text-field:focused {
+    -fx-background-color: -color-neutral;
+    -fx-text-fill: -my-grey;
+
+}
+
+
+.choice-box  {
+    -fx-font-size: 12px;
+    -fx-border-color: -accent-color;
+    -fx-background-color: -accent-color;
+    -fx-border-radius: 25px;
+    -fx-border-width: 2px;
+    -fx-text-fill: -color-neutral;
+    -fx-background-radius: 25px;
+}
+
+.choice-box .label {
+    -fx-text-fill: -color-neutral
+}
+
+.choice-box .context-menu {
+    -fx-font-size: 12px;
+    -fx-border-color: -accent-color;
+    -fx-background-color: -color-neutral;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-text-fill: -accent-color;
+
+}
+
+.choice-box .context-menu .label {
+    -fx-text-fill: -my-grey;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: -accent-color;
+
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: -color-neutral;
+}
+
+
+.date-picker {
+    -fx-background-color: -color-neutral;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: -accent-color;
+
+    -fx-background-insets: 1 0 1 1;
+    -fx-background-radius: 25px;
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-background-color:
+            -fx-control-inner-background,
+            -fx-faint-focus-color,
+            -color-neutral;
+    -fx-background-insets: 1 0 1 1, 1 0 1 1, 3 2 3 3;
+    -fx-background-radius: 25px;
+}
+
+.date-picker .menu-button {
+    -fx-background-color: -color-neutral;
+    /*radial-gradient(center 50% 0%, radius 100%, rgba(243, 243, 243, 0.9), rgba(144, 13, 14, 0));;*/
+    -fx-background-radius: 25px;
+    -fx-text-fill: -accent-color;
+    -fx-border-color: -accent-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: 25px;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: -color-neutral;
+    -fx-background-insets: 1 1 1 0, 1, 2;
+    -fx-background-radius: 8px;
+}
+.date-picker-popup {
+    -fx-background-color:
+            -color-neutral;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 8px;
+    -fx-alignment: CENTER; /* VBox */
+    -fx-spacing: 0;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 0.588883em 0.5em 0.666667em 0.5em; /* 7 6 8 6 */
+    -fx-background-color: -color-neutral;
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+}
+
+.date-picker-popup > * > .week-number-cell {
+    -fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em; /* 4 7 4 7 */
+    -fx-border-color: -my-grey;
+    -fx-border-width: 1px;
+    -fx-background: -color-neutral;
+    -fx-background-color: -color-neutral;
+    -fx-text-fill: -my-grey;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-padding: 0.333333em 0.583333em 0.333333em 0.583333em; /* 4 7 4 7 */
+    -fx-border-color: derive(-fx-selection-bar-non-focused, 60%);
+    -fx-border-width: 1px;
+    -fx-font-size: 1em;
+    -fx-background: -fx-control-inner-background;
+    -fx-background-color: -color-neutral;
+    -fx-text-fill: -my-grey;
+}
+
+.calendar-header {
+    -fx-background-color: color-neutral;
+    -fx-padding: 0.5em;
+    /* -fx-background-radius: 10;*/
+}
+
+.table-view {
+    -fx-background-color: -color-neutral;
+    -fx-background-radius: 10px;
+    -fx-border-color: -my-grey;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header {
+    -fx-text-fill: -my-grey;
+    -fx-background-color: rgb(128, 128, 128);
+    -fx-background-radius: 2px;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: rgba(143, 143, 143, 0.6);
+    -fx-text-fill: -my-grey;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: -my-grey;
+    -fx-font-weight:500;
+    -fx-background-radius: 2px;
+
+}
+
+.table-row-cell:odd{
+    -fx-background-color: rgba(159, 159, 159, 0.6);
+    -fx-background-insets: 0, 0 0 1 0;
+
+}
+
+.radio-button .radio{
+    -fx-background-color: -color-neutral;
+    -fx-border-color: -accent-color;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+    -fx-background-image: null;
+}
+
+.radio-button .radio:selected{
+    -fx-background-color: -accent-color;
+    -fx-background-image: null;
+
+}
+
+
+
+.tab {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.tab-pane .tab {
+    -fx-background-color: -accent-color;
+    -fx-text-fill: -color-neutral;
+
+}
+
+.tab-pane .tab:focused {
+    -fx-background-color: -accent-color;
+
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: -color-neutral;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: -my-grey;
+
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: -color-neutral;
+    -fx-border-radius: 2px;
+}
+
+.tab-pane .tab:focused {
+    -fx-background-color: -color-neutral;
+    -fx-border-radius: 2px;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected .focused-indicator{
+    -fx-border-color: -my-grey;
+
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: #919191;
+}
+
